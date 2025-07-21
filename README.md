@@ -85,24 +85,24 @@ Create a directory for your build and check-out the `zm-build` repository:
     cd zm-build
     git checkout origin/develop
 
-Build 10.1.0
+Build 10.1.x
 
 ```
 mkdir installer-build
 cd installer-build
-git clone --depth 1 --branch 10.1.0 git@github.com:Zimbra/zm-build.git
+git clone --depth 1 --branch 10.1.10 git@github.com:Zimbra/zm-build.git
 cd zm-build
-ENV_CACHE_CLEAR_FLAG=true ./build.pl --ant-options -DskipTests=true --git-default-tag=10.1.0 --build-release-no=10.1.0 --build-type=FOSS --build-release=LIBERTY --build-release-candidate=GA --build-thirdparty-server=files.zimbra.com --no-interactive
+ENV_CACHE_CLEAR_FLAG=true ./build.pl --ant-options -DskipTests=true --git-default-tag=10.1.10,10.1.9,10.1.8,10.1.7,10.1.6,10.1.5,10.1.4,10.1.3,10.1.2,10.1.1,10.1.0 --build-release-no=10.1.10 --build-type=FOSS --build-release=DAFFODIL --build-release-candidate=GA --build-thirdparty-server=files.zimbra.com --no-interactive
 ```
 
-To build a specific patch example 10.0.8 run the following:
+To build a specific patch example 10.0.x run the following:
 
 ```
 mkdir installer-build
 cd installer-build
-git clone --depth 1 --branch 10.0.6 git@github.com:Zimbra/zm-build.git
+git clone --depth 1 --branch 10.0.16 git@github.com:Zimbra/zm-build.git
 cd zm-build
-ENV_CACHE_CLEAR_FLAG=true ./build.pl --ant-options -DskipTests=true --git-default-tag=10.0.8,10.0.7,10.0.6,10.0.5,10.0.4,10.0.3,10.0.2,10.0.1,10.0.0-GA --build-release-no=10.0.8 --build-type=FOSS --build-release=LIBERTY --build-release-candidate=GA --build-thirdparty-server=files.zimbra.com --no-interactive
+ENV_CACHE_CLEAR_FLAG=true ./build.pl --ant-options -DskipTests=true --git-default-tag=10.0.16,10.0.15,10.0.14,10.0.13,10.0.12,10.0.11,10.0.10,10.0.9,10.0.8,10.0.7,10.0.6,10.0.5,10.0.4,10.0.3,10.0.2,10.0.1,10.0.0-GA --build-release-no=10.0.8 --build-type=FOSS --build-release=DAFFODIL --build-release-candidate=GA --build-thirdparty-server=files.zimbra.com --no-interactive
 ```
 
 Or for example 9.0.0.p40 run the following:
